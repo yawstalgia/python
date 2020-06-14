@@ -1,0 +1,16 @@
+mvp 2 implementation
+appheader
+getName
+cleanseName
+    remove non-letter characters
+    check to see if its blank
+workoutResult
+rinseRepeat
+
+product roadmap
+DONE:    fixes to get to mvp 2 implementation
+    save to a file
+    select from one of many workout plans
+    select from one or more workout plans
+    allow for configuration of workout plans
+    gui

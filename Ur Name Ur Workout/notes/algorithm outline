@@ -1,0 +1,81 @@
+This is an outline of the program:
+
+Version 4
+	1. Program body
+		a. Step 1: Print: Program name; version; purpose
+		b. Step 2: Call function: NameInput
+		c. Step 3: Call function: NameParser
+	
+	2. Descriptions of the functions
+		a. NameInput --> get the user's name
+		b. NameParser --> run through each letter of the user's name
+		c. GetExercise --> get the exercise for each letter of the user's name
+		d. FilterName --> filter the user's name for any non-letter characters
+	
+	3. Function: NameInput
+		a. Print: "Please enter your name:"
+		b. User input: NAME
+		c. If NAME == "" then 
+			i. Print: "This is blank, you must provide your name to proceed."
+			ii. Go back to the top
+		d. ElseIf then
+			i. NAME == FilterName(NAME)
+
+	4. Function: NameParser(y)
+		a. For len(y)
+			i. GetExercise(NAME(y))
+			ii. i++
+	
+	5. Function: FilterName(x)
+		a. i == 0
+		b. For len(x)
+			i. If [character from NAME(i)] == a letter character then
+				1) NewName = NewName + len(x)
+			ii. i++
+		c. Output NewName 
+	
+	6. Function: GetExercise(z)
+		a. If z == "a" then ExerciseOutput = "10 mountain climbers"
+		b. If z == "b" then ExerciseOutput = "25 crunches"
+		c. If z == "c" then ExerciseOutput = "10 burpees"
+		d. If z == "d" then ExerciseOutput = "1 minute plank"
+		e. If z == "e" then ExerciseOutput = "20 pushups"
+		f. If z == "f" then ExerciseOutput = "15 jumping jacks"
+		g. If z == "g" then ExerciseOutput = "20 alternate lunges"
+		h. If z == "h" then ExerciseOutput = "10 full situps"
+		i. If z == "i" then ExerciseOutput = "1 minute wall sit"
+		j. If z == "j" then ExerciseOutput = "15 plank jacks"
+		k. If z == "k" then ExerciseOutput = "12 star jumps"
+		l. If z == "l" then ExerciseOutput = "15 sumo squats"
+		m. If z == "m" then ExerciseOutput = "15 tricep dips"
+		n. If z == "n" then ExerciseOutput = "30 crunches"
+		o. If z == "o" then ExerciseOutput = "15 plank jacks"
+		p. If z == "p" then ExerciseOutput = "15 glute bridges"
+		q. If z == "q" then ExerciseOutput = "10 squat jumps"
+		r. If z == "r" then ExerciseOutput = "15 calf raisers"
+		s. If z == "s" then ExerciseOutput = "20 high knees"
+		t. If z == "t" then ExerciseOutput = "20 Russian twists"
+		u. If z == "u" then ExerciseOutput = "10 tricep dips"
+		v. If z == "v" then ExerciseOutput = "12 toe touches"
+		w. If z == "w" then ExerciseOutput = "30 second wall sit"
+		x. If z == "x" then ExerciseOutput = "10 tuck jumps"
+		y. If z == "y" then ExerciseOutput = "20 superman's"
+		z. If z == "z" then ExerciseOutput = "10 side lunges"
+		aa. Output ExerciseOutput
+
+
+/// If I want the user to decide if they want to filter out unnecessary characters or redo the name input piece
+			i. For len(NAME)
+				1) NONLETTERS = FALSE
+				2) If [character from NAME(i)] == a non-letter character then
+					a) NONLETTERS = TRUE
+			ii. If NONLETTERS == TRUE then 
+				1) Print: "There are non-letter characters in your name and we do not support those numbers. Would you like to filter those characters out? (Y/N)"
+				2) User input: FILTERORNAW
+				3) If FILTERORNAW == "Y" OR "Yes"
+					a) Go back to the top of NameInput
+				4) ElseIf FILTERORNAW == "N" OR "No"
+					a) NAME == FilterName(NAME)
+				5) ElseIf 
+					a) Print: "Invalid response"
+/// 
